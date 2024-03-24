@@ -10,39 +10,37 @@ Display Results: Show the total marks, average percentage, and the corresponding
 
 My Approch
 
-Main Method:
+Main Method (main):
 
-The main method initializes a Scanner object to read input from the user.
-It prompts the user to input the number of subjects.
-It creates an array marks to store the marks for each subject and initializes totalMarks to zero.
+The main method serves as the entry point of the program.
+It starts by creating a Scanner object to read input from the user.
+It prompts the user to enter the number of subjects for which they want to input marks.
+It initializes an array marks to store the marks for each subject and a variable totalMarks to accumulate the total marks entered by the user.
+It then iterates through each subject, prompting the user to input marks for each subject and updating totalMarks accordingly.
+After inputting marks for all subjects, it calculates the average percentage by dividing the total marks by the number of subjects.
 
-Input Marks:
-
-Inside a for loop, the program prompts the user to enter marks for each subject.
-The marks are stored in the marks array, and totalMarks is updated by adding each mark.
-
-Calculate Average Percentage:
-
-After inputting marks for all subjects, the program calculates the average percentage by dividing totalMarks by the number of subjects (numSubjects).
-The average percentage is stored in the variable averagePercentage.
-
-Calculate Grade:
+Calculate Grade Method (calculateGrade):
 
 The calculateGrade method takes the average percentage as input and determines the corresponding grade based on predefined grade boundaries.
-Grades are determined using if-else statements:
-If the percentage is greater than or equal to 85, the grade is 'A+'.
-If the percentage is between 75 and 84, the grade is 'A'.
-If the percentage is between 65 and 74, the grade is 'B+'.
-If the percentage is between 55 and 64, the grade is 'B'.
-If the percentage is between 45 and 54, the grade is 'C+'.
-If the percentage is between 35 and 44, the grade is 'C'.
-Otherwise, the grade is 'F'.
-The calculated grade is returned to the main method and stored in the variable grade.
+Grades are represented as strings with + signs appended where appropriate:
+If the percentage is greater than or equal to 85, the grade is "A+".
+If the percentage is between 75 and 84, the grade is "A".
+If the percentage is between 65 and 74, the grade is "B+".
+If the percentage is between 55 and 64, the grade is "B".
+If the percentage is between 45 and 54, the grade is "C+".
+If the percentage is between 35 and 44, the grade is "C".
+Otherwise, the grade is "F".
+The method returns the calculated grade as a string.
 
-Output Results:
+Output:
 
-Finally, the program prints out the total marks, average percentage, and grade.
+Finally, the program prints out the total marks, average percentage, and calculated grade.
+It formats the average percentage to two decimal places using String.format().
+Input Validation and Resource Management:
 
-Closing Resources:
+The program does not include input validation or explicit resource management (like closing the Scanner object). Adding these features would enhance the robustness of the program.
 
-The Scanner object is closed to release system resources.
+Functionality:
+
+Users can input marks for multiple subjects and obtain the average percentage and corresponding grade based on those marks.
+Grades are represented with + signs where appropriate, providing a detailed grading scale.
