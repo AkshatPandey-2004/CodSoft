@@ -19,7 +19,7 @@ public class StudentMarks {
 
         double averagePercentage = (double) totalMarks / numSubjects;
 
-        char grade = calculateGrade(averagePercentage);
+        String grade = calculateGrade(averagePercentage);
 
         System.out.println("\nTotal Marks: " + totalMarks);
         System.out.println("Average Percentage: " + String.format("%.2f", averagePercentage) + "%");
@@ -28,21 +28,21 @@ public class StudentMarks {
         scanner.close();
     }
 
-    public static char calculateGrade(double percentage) {
+    public static String calculateGrade(double percentage) {
         if (percentage >= 85) {
-            return 'A' + '+'; 
+            return "A+"; 
         } else if (percentage >= 75) {
-            return 'A';
+            return "A";
         } else if (percentage >= 65) {
-            return 'B' + '+';
+            return "B+";
         } else if (percentage >= 55) {
-            return 'B';
+            return "B";
         } else if (percentage >= 45) {
-            return 'C' + '+';
+            return "C+";
         } else if (percentage >= 35) {
-            return 'C';
+            return "C";
         } else {
-            return 'F';
+            return "F";
         }
     }
 }
